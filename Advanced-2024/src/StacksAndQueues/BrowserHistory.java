@@ -12,7 +12,7 @@ public class BrowserHistory {
 
         ArrayDeque<String> history = new ArrayDeque<>();
         while (!line.equals("Home")) {
-            if (line.equals("back") & !history.isEmpty()) {
+            if (line.equals("back")) {
                 String current = history.pop();
                 if(history.isEmpty()){
                     System.out.println("no previous URLs");
