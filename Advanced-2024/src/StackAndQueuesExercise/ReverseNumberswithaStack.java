@@ -9,7 +9,13 @@ public class ReverseNumberswithaStack {
 
         String [] input =  scanner.nextLine().split("\\s+");
         ArrayDeque<String> numsAsString = new ArrayDeque<>();
-        
+        for (int i = 0; i < input.length; i++) {
+            numsAsString.push(input[i]);
+        }
+
+        while (!numsAsString.isEmpty()){
+            System.out.print(numsAsString.poll() + " ");
+        }
 
     }
 }
