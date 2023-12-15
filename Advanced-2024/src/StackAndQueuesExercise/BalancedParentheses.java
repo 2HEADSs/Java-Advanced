@@ -47,10 +47,7 @@ public class BalancedParentheses {
             }
         }
 
-        if (balanced) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+        String output = balanced ? "YES" : "NO";
+        System.out.println(output);
     }
 }
