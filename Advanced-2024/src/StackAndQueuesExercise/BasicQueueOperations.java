@@ -23,7 +23,7 @@ public class BasicQueueOperations {
         for (int i = 0; i < n; i++) {
             queueOfNums.offer(numbers[i]);
         }
-        
+
         for (int i = 0; i < s; i++) {
             queueOfNums.poll();
         }
