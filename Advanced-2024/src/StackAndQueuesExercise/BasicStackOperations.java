@@ -1,11 +1,14 @@
 package StackAndQueuesExercise;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BasicStackOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         String [] firstLine = (scanner.nextLine().split(" "));
         int n = Integer.parseInt(firstLine[0]);
         int s = Integer.parseInt(firstLine[1]);
@@ -20,28 +23,15 @@ public class BasicStackOperations {
         }
 
         for (int i = 1; i <= s; i++) {
-            stackOfNums.poll();
-        }
-        int minMalue = Integer.MAX_VALUE;
-        boolean present = false;
-        if(stackOfNums.isEmpty()){
-            minMalue = 0;
-        }else {
-            while (!stackOfNums.isEmpty()){
-                int currentNum = stackOfNums.poll();
-                if(currentNum < minMalue){
-                    minMalue = currentNum;
-                }
-                if(currentNum ==x){
-                    present = true;
-                }
-            }
+            stackOfNums.pop();
         }
 
-        if(present){
+        if(stackOfNums.contains(x)){
             System.out.println(true);
+        } else if (stackOfNums.isEmpty()) {
+            System.out.println(0);
         }else {
-            System.out.println(minMalue);
+            System.out.println(Collections.min(stackOfNums));
         }
 
     }
