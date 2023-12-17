@@ -28,7 +28,7 @@ public class SumMatrixElements2 {
                 totalSum += num;
             }
         }
-        
+
         System.out.println(rows);
         System.out.println(cols);
         System.out.println(totalSum);
