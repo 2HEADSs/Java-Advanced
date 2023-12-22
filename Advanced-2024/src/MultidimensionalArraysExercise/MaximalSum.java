@@ -21,35 +21,25 @@ public class MaximalSum {
 
     private static void findMaxSum(int[][] matrix) {
         int maxSum = Integer.MIN_VALUE;
-        ArrayDeque<int[][]> maxSumArrays = new ArrayDeque<>();
-        int currentSum = 0;
+
+        int rowIndex=0;
+        int colIndex=0;
 
         for (int i = 0; i < matrix.length - 2; i++) {
-            int[][] currentArray = new int[3][3];
-
             for (int j = i; j < matrix[i].length - 2; j++) {
-                currentSum = matrix[i][j] + matrix[i][j + 1] + matrix[i][j + 2] +
+                int currentSum = matrix[i][j] + matrix[i][j + 1] + matrix[i][j + 2] +
                         matrix[i + 1][j] + matrix[i + 1][j + 1] + matrix[i + 1][j + 2] +
                         matrix[i + 2][j] + matrix[i + 2][j + 1] + matrix[i + 2][j + 2];
 
                 if (currentSum > maxSum) {
                     maxSum = currentSum;
-
-                    currentArray[0][0] = matrix[i][j];
-                    currentArray[0][1] = matrix[i][j + 1];
-                    currentArray[0][2] = matrix[i][j + 2];
-                    currentArray[1][0] = matrix[i + 1][j];
-                    currentArray[1][1] = matrix[i + 1][j + 1];
-                    currentArray[1][2] = matrix[i + 1][j + 2];
-                    currentArray[2][0] = matrix[i + 2][j];
-                    currentArray[2][1] = matrix[i + 2][j + 1];
-                    currentArray[2][2] = matrix[i + 2][j + 2];
-                    maxSumArrays.push(currentArray);
+                    rowIndex = i;
+                    colIndex = j;
                 }
             }
         }
         System.out.println("Sum = " + maxSum);
-        printMatrix(maxSumArrays.pop());
+        printMatrix(matrix,rowIndex,colIndex );
     }
 
     private static int[] readArray(Scanner scanner) {
@@ -65,10 +55,10 @@ public class MaximalSum {
 
     }
 
-    private static void printMatrix(int[][] matrix) {
-        for (int[] arr : matrix) {
-            for (int e : arr) {
-                System.out.print(e + " ");
+    private static void printMatrix(int[][] matrix, int rowIndex, int colIndex) {
+        for (int row = rowIndex; row < rowIndex + 3; row++) {
+            for (int col = colIndex; col < colIndex+3; col++) {
+                System.out.print(matrix[row][col]+" ");
             }
             System.out.println();
         }
