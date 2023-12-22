@@ -17,7 +17,7 @@ public class Matrixshuffling {
 
         while (!commands[0].equals("END")) {
             String command = commands[0];
-            if(!command.equals("swap")){
+            if (!command.equals("swap") || commands.length != 5) {
                 System.out.println("Invalid input!");
                 commands = readLine(scanner);
                 continue;
