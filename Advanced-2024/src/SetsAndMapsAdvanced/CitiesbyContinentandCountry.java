@@ -30,10 +30,10 @@ public class CitiesbyContinentandCountry {
             cities.add(city);
         }
 
-        countriesByContinent.forEach((key, value) -> {
-            System.out.println(key + ":");
+        countriesByContinent.forEach((continent, counties) -> {
+            System.out.println(continent + ":");
 
-            value.forEach((country, cities) -> {
+            counties.forEach((country, cities) -> {
                 String citiesAsString = String.join(", ", cities);
                 System.out.println("  " + country + " -> " + citiesAsString);
             });
