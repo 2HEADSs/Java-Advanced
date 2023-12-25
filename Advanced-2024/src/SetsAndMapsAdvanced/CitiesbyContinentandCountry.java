@@ -33,9 +33,9 @@ public class CitiesbyContinentandCountry {
         countriesByContinent.forEach((key, value) -> {
             System.out.println(key + ":");
 
-            value.forEach((key1, value1) -> {
-                String cities = String.join(", ", value1);
-                System.out.println("  " + key1 + " -> " + cities);
+            value.forEach((country, cities) -> {
+                String citiesAsString = String.join(", ", cities);
+                System.out.println("  " + country + " -> " + citiesAsString);
             });
         });
 
