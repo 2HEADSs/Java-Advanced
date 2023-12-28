@@ -1,4 +1,4 @@
-package MultidimensionalArraysExercise;
+package SetsAndMapsAdvancedExercise;
 
 import java.util.LinkedHashSet;
 import java.util.Scanner;
