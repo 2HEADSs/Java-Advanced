@@ -20,13 +20,14 @@ public class Phonebook {
             line = scanner.nextLine();
         }
         String searchName = scanner.nextLine();
+        
         while (!"stop".equals(searchName)) {
             if (phonebook.containsKey(searchName)) {
                 System.out.println(searchName + " -> " + phonebook.get(searchName));
             } else {
                 System.out.println("Contact " + searchName + " does not exist.");
             }
-        searchName = scanner.nextLine();
+            searchName = scanner.nextLine();
         }
 
     }
