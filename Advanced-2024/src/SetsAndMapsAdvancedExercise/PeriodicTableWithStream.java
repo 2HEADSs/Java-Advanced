@@ -15,7 +15,6 @@ public class PeriodicTableWithStream {
 
         }
 
-
         for (String el : elements) {
             System.out.print(el + " ");
         }
