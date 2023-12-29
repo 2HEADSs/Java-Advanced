@@ -21,8 +21,6 @@ public class CountSymbols2 {
             }
 
         }
-        for (Character s : container.keySet()) {
-            System.out.println(s + ": " + container.get(s) +" time/s");
-        }
+        container.forEach((key, value) -> System.out.printf("%c: %d time/s\n", key, value));
     }
 }
