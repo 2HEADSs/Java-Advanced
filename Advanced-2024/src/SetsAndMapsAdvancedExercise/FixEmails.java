@@ -26,7 +26,7 @@ public class FixEmails {
             line = scanner.nextLine();
         }
 
-        
+
         emails.forEach((key, value) -> System.out.println(key + " -> " + value));
     }
 }
