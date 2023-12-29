@@ -46,11 +46,11 @@ public class HandsOfCards {
         }
 
 
-        for (Map.Entry<String, Set<String>> entrySet : hands.entrySet()) {
-            String playerName = entrySet.getKey();
-            int points = calculatePoints(entrySet.getValue());
-            System.out.printf("%s: %d\n", playerName, points);
-        }
+//        for (Map.Entry<String, Set<String>> entrySet : hands.entrySet()) {
+//            String playerName = entrySet.getKey();
+//            int points = calculatePoints(entrySet.getValue());
+//            System.out.printf("%s: %d\n", playerName, points);
+//        }
         hands.forEach((key,value)->{
             int points = calculatePoints(value);
             System.out.printf("%s: %d\n", key, points);
