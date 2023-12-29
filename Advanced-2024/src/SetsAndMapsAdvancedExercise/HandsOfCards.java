@@ -51,6 +51,10 @@ public class HandsOfCards {
             int points = calculatePoints(entrySet.getValue());
             System.out.printf("%s: %d\n", playerName, points);
         }
+        hands.forEach((key,value)->{
+            int points = calculatePoints(value);
+            System.out.printf("%s: %d\n", key, points);
+        });
     }
 
     private static int calculatePoints(Set<String> cards) {
@@ -60,6 +64,7 @@ public class HandsOfCards {
             String type = String.valueOf(card.charAt(card.length() - 1));
             points += power.get(cardPower) * types.get(type);
         }
+
 
         return points;
 
