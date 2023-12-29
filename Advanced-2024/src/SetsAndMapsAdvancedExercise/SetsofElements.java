@@ -24,7 +24,7 @@ public class SetsofElements {
 
         firstSet.retainAll(secondSet);
 
-        String result = String.join("",firstSet);
+        String result = String.join(" ",firstSet);
         System.out.println(result);
 
 
