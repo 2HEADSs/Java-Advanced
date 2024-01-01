@@ -35,11 +35,9 @@ public class CountCharacterTypes {
                 }
                 line = reader.readLine();
             }
-            writer.write("Vowels: "+vowelsCount);
-            writer.write("\n");
-            writer.write("Other symbols: "+othersCount);
-            writer.write("\n");
-            writer.write("Punctuation: "+punctuations);
+            writer.write(String.format("Vowels: %d\n", vowelsCount));
+            writer.write(String.format("Other symbols: %d\n", othersCount));
+            writer.write(String.format("Punctuation: %d\n", punctuations));
 
         } catch (IOException e) {
             throw new RuntimeException(e);
