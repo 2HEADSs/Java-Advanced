@@ -16,9 +16,12 @@ public class ReverseandExclude {
 
         int divisible = Integer.parseInt(scanner.nextLine());
 
-        Consumer<List<Integer>> reverseRemoveDivisibleAndPrint = (arr) -> {
-            arr.reversed().stream().filter(s -> s % divisible != 0).forEach(s -> System.out.print(s + " "));
-        };
+        Consumer<List<Integer>> reverseRemoveDivisibleAndPrint = (arr) ->
+                arr.reversed()
+                        .stream()
+                        .filter(s -> s % divisible != 0)
+                        .forEach(s -> System.out.print(s + " "));
+
         reverseRemoveDivisibleAndPrint.accept(nums);
 
     }
