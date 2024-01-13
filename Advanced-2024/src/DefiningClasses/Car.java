@@ -10,11 +10,23 @@ public class Car {
         brand = newBrand;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
     public void setModel(String newModel) {
         model = newModel;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     public void setHorsePower(int newHorsePower) {
         horsePower = newHorsePower;
+    }
+    
+    public int getHorsePower() {
+        return horsePower;
     }
 }
