@@ -6,30 +6,6 @@ public class Car {
     private String model;
     private int horsePower;
 
-
-    public Car() {
-        this("unknown", "unknown", -1);
-    }
-
-    public Car(String brand) {
-        this(brand, "unknown", -1);
-    }
-
-    public Car(String brand, String model) {
-        this(brand, model, -1);
-
-    }
-    public Car(String brand, int model) {
-        this(brand, "unknown", -1);
-
-    }
-
-    public Car(String brand, String model, int horsePower) {
-        setBrand(brand);
-        setModel(model);
-        setHorsePower(horsePower);
-    }
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -54,10 +30,9 @@ public class Car {
         return horsePower;
     }
 
-    public String carInfo() {
+    public String carInfo(){
         return toString();
     }
-
     @Override
     public String toString() {
         return String.format("The car is: %s %s - %d HP.",
