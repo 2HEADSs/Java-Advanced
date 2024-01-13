@@ -14,10 +14,16 @@ public class Main {
         int n = Integer.parseInt(scanner.nextLine());
         while (n-- > 0) {
             String[] tokens = scanner.nextLine().split("\\s+");
-            Car car = new Car();
-            car.setBrand(tokens[0]);
-            car.setModel(tokens[1]);
-            car.setHorsePower(Integer.parseInt(tokens[2]));
+            String brand = tokens[0];
+            Car car;
+
+            if (tokens.length == 1) {
+                car = new Car(brand);
+            } else {
+                String model = tokens[1];
+                int horsePower = Integer.parseInt(tokens[2]);
+                car = new Car(brand, model, horsePower);
+            }
             cars.add(car);
         }
 
