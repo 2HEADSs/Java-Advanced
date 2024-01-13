@@ -2,8 +2,19 @@ package DefiningClasses;
 
 public class Car {
 
-    public String brand;
-    public String model;
-    public int horsePower;
+    private String brand;
+    private String model;
+    private int horsePower;
 
+    public void setBrand(String newBrand) {
+        brand = newBrand;
+    }
+
+    public void setModel(String newModel) {
+        model = newModel;
+    }
+
+    public void setHorsePower(int newHorsePower) {
+        horsePower = newHorsePower;
+    }
 }
