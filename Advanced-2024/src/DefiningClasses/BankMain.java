@@ -24,8 +24,6 @@ public class BankMain {
             } else {
                 printInterest(bank, tokens);
             }
-
-
             line = scanner.nextLine();
         }
     }
@@ -36,7 +34,7 @@ public class BankMain {
             return;
         }
         BankAccount account = bank.get(id);
-        int years = Integer.parseInt(tokens[1]);
+        int years = Integer.parseInt(tokens[2]);
         System.out.printf("%.2f%n", account.getInterest(years));
 
     }
