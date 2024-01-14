@@ -1,4 +1,4 @@
-package DefiningClassesExercise;
+package DefiningClassesExercise.opinion1;
 
 public class Person {
 
@@ -30,7 +30,7 @@ public class Person {
     static class PersonComparator implements java.util.Comparator<Person> {
         @Override
         public int compare(Person a, Person b) {
-            return b.years - a.years;
+            return a.name.compareTo(b.name);
         }
     }
 }

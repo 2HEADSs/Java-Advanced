@@ -1,4 +1,4 @@
-package DefiningClassesExercise;
+package DefiningClassesExercise.opinion1;
 
 import java.util.*;
 
