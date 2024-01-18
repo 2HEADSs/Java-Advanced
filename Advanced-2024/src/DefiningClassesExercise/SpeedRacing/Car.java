@@ -55,7 +55,7 @@ public class Car {
     public boolean tryToDrive(int km) {
 
         double leftAmount = (this.getFuelAmount() - (this.getFuelCost() * km));
-        if (leftAmount > 0) {
+        if (leftAmount >= 0) {
             this.setFuel(leftAmount);
             sumDistance(km);
             return true;
