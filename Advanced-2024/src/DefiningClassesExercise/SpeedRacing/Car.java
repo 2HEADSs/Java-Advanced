@@ -2,12 +2,12 @@ package DefiningClassesExercise.SpeedRacing;
 
 public class Car {
 
-    String model;
-    double fuelAmount;
+    private String model;
+    private double fuelAmount;
 
-    double fuelCost;
+    private double fuelCost;
 
-    int distance;
+    private int distance;
 
 
     public Car(String model, double fuelAmount, double fuelCost) {
