@@ -1,6 +1,5 @@
 import java.util.ArrayDeque;
 
-
 public class Jar<T> {
     private ArrayDeque<T> stack;
 
