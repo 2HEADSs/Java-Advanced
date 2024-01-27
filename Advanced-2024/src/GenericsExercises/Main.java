@@ -1,7 +1,6 @@
 package GenericsExercises;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,20 +8,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<Box<String>> boxList = new ArrayList<>();
+        List<Box<Double>> boxList = new ArrayList<>();
         int n = Integer.parseInt(scanner.nextLine());
 
         while (n-- > 0) {
-            Box<String> box = new Box<>(scanner.nextLine());
+            Box<Double> box = new Box<>(Double.parseDouble(scanner.nextLine()));
             boxList.add(box);
         }
-        int[] tokens = Arrays.stream(scanner.nextLine().split("\\s+"))
-                .mapToInt(Integer::parseInt)
-                .toArray();
+        Box<Double> stringBox = new Box<>(Double.parseDouble(scanner.nextLine()));
+        Double output = countGreaterElements(boxList, stringBox);
+        System.out.printf("%.0f\n",output);
+    }
 
-        swap(boxList, tokens[0], tokens[1]);
+    static <T extends Comparable<T>> double countGreaterElements(List<T> data, T element) {
+        int count = 0;
 
-        boxList.forEach(System.out::println);
+        for (T e : data) {
+            int res = e.compareTo(element);
+            if (res > 0) {
+                count++;
+            }
+        }
+        return count;
     }
 
     static <T> void swap(List<T> boxList, int firstIndex, int secondIndex) {
