@@ -1,6 +1,6 @@
 package GenericsExercises;
 
-public class Box<T> {
+public class Box<T extends  Comparable<T>> implements Comparable<Box<T>> {
     private T data;
 
     public Box(T data) {
@@ -12,5 +12,10 @@ public class Box<T> {
         return String.format("%s: %s",
                 this.data.getClass().getName(), this.data);
 
+    }
+
+    @Override
+    public int compareTo(Box<T> o) {
+        return this.data.compareTo(o.data);
     }
 }
